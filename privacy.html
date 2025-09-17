@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Privacy Policy — Spring Harbor Studios</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Privacy Policy for Spring Harbor Studios apps, including Windblock (Google Calendar add-on) and YearMap (Chrome extension)." />
+  <link rel="canonical" href="https://springharborstudios.com/privacy.html" />
+  <style>
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;background:#f7f4ef;color:#2a2a2a;line-height:1.6}
+    .wrap{max-width:860px;margin:0 auto;padding:28px}
+    a{color:#1769aa}
+    h1{margin:0 0 6px}
+    .card{background:#fff;border:1px solid #e6e1d7;border-radius:16px;padding:22px}
+    .muted{color:#666}
+    ul{margin-top:6px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Privacy Policy</h1>
+    <p class="muted">Last updated: <span id="y"></span>-<span id="m"></span>-<span id="d"></span></p>
+    <div class="card">
+      <p>
+        Spring Harbor Studios builds straightforward web utilities and respects your privacy.
+        We collect the minimum information needed for our apps to work and do not sell personal data.
+        If you have questions, contact <a href="mailto:support@springharborstudios.com">support@springharborstudios.com</a>.
+      </p>
+
+      <h2>Who we are</h2>
+      <p>Spring Harbor Studios, Madison, WI (USA). Email: <a href="mailto:support@springharborstudios.com">support@springharborstudios.com</a>.</p>
+
+      <h2>Products covered</h2>
+      <ul>
+        <li><strong>Windblock</strong> — Google Calendar add-on (runs in your Google account)</li>
+        <li><strong>YearMap</strong> — Chrome extension (runs in your browser)</li>
+      </ul>
+
+      <h2>Data we collect</h2>
+      <ul>
+        <li><strong>Windblock:</strong> Uses Google permissions to create and manage a dedicated “Windblock” calendar and to add/update holds based on forecast conditions. The add-on reads free/busy information as needed to avoid conflicts. It does not read the contents of your personal events. Weather data is fetched from the public Open-Meteo API. We do not run our own servers for Windblock and do not store your calendar data on our servers.</li>
+        <li><strong>YearMap:</strong> Stores settings locally in your browser (e.g., chosen colors, ranges). No personal data is transmitted to us.</li>
+      </ul>
+
+      <h2>How we use information</h2>
+      <p>Only to provide the functionality you requested (e.g., creating calendar holds, saving your settings). We do not sell or share personal data with third parties for advertising.</p>
+
+      <h2>Google user data</h2>
+      <p>
+        For Windblock, Google user data is accessed via your consent to the necessary Calendar scopes to create and manage a dedicated calendar and events. Data is used in-account and not transferred to our servers. If we ever need to change this, we will update this policy and request new consent.
+      </p>
+
+      <h2>Retention</h2>
+      <p>Windblock stores data in your Google account (the dedicated calendar and its events). YearMap stores settings in your browser. You can remove either at any time (see “Your choices”). We do not keep server copies.</p>
+
+      <h2>Your choices</h2>
+      <ul>
+        <li><strong>Windblock:</strong> Remove the add-on and delete the “Windblock” calendar in Google Calendar to remove created events. You can also revoke app access in your Google Account Security settings.</li>
+        <li><strong>YearMap:</strong> Remove the extension via your browser’s extensions page and clear its site data/local storage.</li>
+      </ul>
+
+      <h2>Children</h2>
+      <p>Our apps are intended for general audiences and are not directed to children under 13.</p>
+
+      <h2>Security</h2>
+      <p>We aim for simple designs that minimize data collection. Any data handled by Google or your browser is protected under their platforms’ security controls.</p>
+
+      <h2>Changes</h2>
+      <p>We may update this policy. We will update the “Last updated” date and, where appropriate, notify users in-product.</p>
+
+      <h2>Contact</h2>
+      <p>Email <a href="mailto:support@springharborstudios.com">support@springharborstudios.com</a> with any privacy questions.</p>
+    </div>
+    <p style="margin-top:18px;"><a href="/">← Back to the Developer site</a></p>
+  </div>
+  <script>
+    const d=new Date();document.getElementById('y').textContent=d.getFullYear();
+    document.getElementById('m').textContent=String(d.getMonth()+1).padStart(2,'0');
+    document.getElementById('d').textContent=String(d.getDate()).padStart(2,'0');
+  </script>
+</body>
+</html>
