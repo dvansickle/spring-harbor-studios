@@ -16,10 +16,11 @@
       --bg:#f7f4ef; --card:#ffffff; --ink:#2a2a2a; --muted:#666; --brand:#1769aa; --line:#e6e1d7;
       --radius:16px; --shadow:0 6px 18px rgba(0,0,0,.06);
 
-      /* Windblock "peacock" blue */
-      --peacock:#0e568a;
-      --peacock-hover:#0b4772;
-      --peacock-text:#ffffff;
+      /* Windblock brand (peacock blue) */
+      --wb:#1769aa;
+      --wb-hover:#125487;
+      --wb-text:#ffffff;
+      --wb-ring:rgba(23,105,170,.32);
     }
     *{box-sizing:border-box}
     body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
@@ -42,21 +43,20 @@
     ul.clean{padding-left:18px;margin:8px 0}
     small.disclaimer{display:block;color:#666}
 
-    /* CTA button (Windblock) */
+    /* CTA button */
     .btn{
       display:inline-flex;align-items:center;gap:10px;
       padding:10px 16px;border-radius:12px;border:1px solid transparent;
-      font-weight:600;text-decoration:none;line-height:1;
-      box-shadow:var(--shadow);transition:transform .02s ease, background-color .2s ease, box-shadow .2s ease;
+      font-weight:600;line-height:1;text-decoration:none;
+      box-shadow:var(--shadow);
+      transition:background-color .2s ease, transform .02s ease, box-shadow .2s ease;
       will-change:transform;
     }
     .btn:active{transform:translateY(1px)}
-    .btn--windblock{
-      background:var(--peacock); color:var(--peacock-text);
-      border-color:rgba(0,0,0,.04);
-    }
-    .btn--windblock:hover{ background:var(--peacock-hover); text-decoration:none; }
-    .btn__icon{font-size:1.1em; line-height:1; }
+    .btn--windblock{background:var(--wb);color:var(--wb-text)}
+    .btn--windblock:hover{background:var(--wb-hover);text-decoration:none}
+    .btn--windblock:focus-visible{outline:none;box-shadow:0 0 0 4px var(--wb-ring)}
+    .btn__logo{height:18px;width:auto;display:block;filter:none}
   </style>
 </head>
 <body>
@@ -115,8 +115,13 @@
             <li>Support: <a href="mailto:support@windblock.app">support@windblock.app</a></li>
           </ul>
           <p>
-            <a class="btn btn--windblock" href="https://workspace.google.com/marketplace/app/windblock/316156391256" rel="noopener" role="button" aria-label="Install Windblock from Google Workspace Marketplace">
-              <span class="btn__icon">🪁</span> Install Windblock
+            <a class="btn btn--windblock"
+               href="https://workspace.google.com/marketplace/app/windblock/316156391256"
+               rel="noopener"
+               role="button"
+               aria-label="Install Windblock from Google Workspace Marketplace">
+              <img class="btn__logo" src="/assets/windblock-128-white.png" alt="Windblock logo" />
+              Install Windblock
             </a>
           </p>
         </article>
