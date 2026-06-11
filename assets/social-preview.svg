@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f7f4ef"/>
+  <rect x="74" y="70" width="1052" height="490" rx="34" fill="#fff" stroke="#e6e1d7" stroke-width="2"/>
+  <rect x="120" y="120" width="74" height="74" rx="18" fill="#1769aa"/>
+  <path d="M138 146c8-10 19-15 31-15 14 0 24 6 31 16-10-4-19-4-27 0-8 4-13 11-19 19-6 9-14 14-25 16 2-16 4-27 9-36Z" fill="#fff"/>
+  <path d="M134 188c14 0 23-6 31-17 8-12 19-18 35-17-6 8-10 15-17 22-10 12-25 18-49 18Z" fill="#9ed5f5"/>
+  <text x="224" y="151" fill="#666" font-family="Arial, sans-serif" font-size="22" letter-spacing="3">INDEPENDENT DEVELOPER</text>
+  <text x="224" y="188" fill="#2a2a2a" font-family="Arial, sans-serif" font-size="32" font-weight="700">Spring Harbor Studios</text>
+  <text x="120" y="310" fill="#2a2a2a" font-family="Arial, sans-serif" font-size="58" font-weight="700">Small, useful web tools</text>
+  <text x="120" y="380" fill="#2a2a2a" font-family="Arial, sans-serif" font-size="58" font-weight="700">for specific interests</text>
+  <text x="120" y="460" fill="#666" font-family="Arial, sans-serif" font-size="27">Windblock  ·  YearMap  ·  Yesterday's Weather</text>
+</svg>

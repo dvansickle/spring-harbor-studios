@@ -4,86 +4,113 @@
   <meta charset="utf-8" />
   <title>Privacy Policy — Spring Harbor Studios</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Privacy Policy for Spring Harbor Studios apps, including Windblock (Google™ Calendar add-on) and YearMap (Chrome™ extension)." />
+  <meta name="description" content="Privacy Policy for Spring Harbor Studios products, including Windblock, YearMap, and Yesterday's Weather." />
   <link rel="canonical" href="https://springharborstudios.com/privacy/" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
   <style>
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;background:#f7f4ef;color:#2a2a2a;line-height:1.6}
-    .wrap{max-width:860px;margin:0 auto;padding:28px}
-    a{color:#1769aa}
+    *{box-sizing:border-box}
+    body{margin:0;background:#f7f4ef;color:#2a2a2a;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Inter,Arial,sans-serif;line-height:1.6}
+    .wrap{width:min(860px,calc(100% - 40px));margin:0 auto;padding:36px 0}
+    a{color:#1769aa;text-underline-offset:3px}
+    a:focus-visible{outline:3px solid rgba(23,105,170,.32);outline-offset:3px}
     h1{margin:0 0 6px}
-    .card{background:#fff;border:1px solid #e6e1d7;border-radius:16px;padding:22px}
-    .muted{color:#666}
+    h2{margin-top:28px}
+    .card{padding:24px;border:1px solid #e6e1d7;border-radius:16px;background:#fff}
+    .muted,.trademark{color:#666}
     ul{margin-top:6px}
-    .trademark{margin-top:18px;font-size:12px;color:#666}
+    .trademark{margin-top:18px;font-size:12px}
+    @media (max-width:520px){.wrap{width:min(100% - 32px,860px);padding:26px 0}.card{padding:20px}}
   </style>
 </head>
 <body>
-  <div class="wrap">
+  <main class="wrap">
     <h1>Privacy Policy</h1>
-    <p class="muted">Last updated: <span id="y"></span>-<span id="m"></span>-<span id="d"></span></p>
+    <p class="muted">Last updated: <time datetime="2026-06-11">June 11, 2026</time></p>
     <div class="card">
       <p>
-        Spring Harbor Studios builds straightforward web utilities and respects your privacy.
-        We collect the minimum information needed for our apps to work and do not sell personal data.
-        If you have questions, contact <a href="mailto:support@springharborstudios.com">support@springharborstudios.com</a>.
+        Spring Harbor Studios builds focused web utilities and aims to collect only the information each product needs.
+        We do not sell personal data. Questions can be sent to
+        <a href="mailto:support@springharborstudios.com">support@springharborstudios.com</a>.
       </p>
 
       <h2>Who we are</h2>
-      <p>Spring Harbor Studios, Madison, WI (USA). Email: <a href="mailto:support@springharborstudios.com">support@springharborstudios.com</a>.</p>
+      <p>Spring Harbor Studios is an independent developer based in Madison, Wisconsin, USA.</p>
 
       <h2>Products covered</h2>
       <ul>
-        <li><strong>Windblock</strong> — Google Calendar™ add-on (runs in your Google™ account)</li>
-        <li><strong>YearMap</strong> — Chrome™ extension (runs in your browser)</li>
+        <li><strong>Windblock</strong> — a Google Calendar™ add-on.</li>
+        <li><strong>YearMap</strong> — a Chrome™ extension.</li>
+        <li><strong>Yesterday's Weather</strong> — a web application and optional weather email service.</li>
       </ul>
 
-      <h2>Data we collect</h2>
-      <ul>
-        <li><strong>Windblock:</strong> Uses Google™ permissions to create and manage a dedicated “Windblock” calendar and to add/update holds based on forecast conditions. The add-on reads free/busy information as needed to avoid conflicts. It does not read the contents of your personal events. Weather data is fetched from the public Open-Meteo API. We do not run our own servers for Windblock and do not store your calendar data on our servers.</li>
-        <li><strong>YearMap:</strong> Stores settings locally in your browser (e.g., chosen colors, ranges). No personal data is transmitted to us.</li>
-      </ul>
-
-      <h2>How we use information</h2>
-      <p>Only to provide the functionality you requested (eg, creating calendar holds, saving your settings). We do not sell or share personal data with third parties for advertising.</p>
-
-      <h2>Google™ user data</h2>
+      <h2>Windblock</h2>
       <p>
-        For Windblock, Google™ user data is accessed via your consent to the necessary Calendar scopes to create and manage a dedicated calendar and events. Data is used in-account and not transferred to our servers. If we ever need to change this, we will update this policy and request new consent.
+        Windblock uses permissions you approve to create and manage a dedicated Windblock calendar and matching events in your
+        Google Account™. It uses your saved location and rules to request hourly weather forecasts from Visual Crossing.
+        Windblock does not read the contents of your personal calendar events, sell personal data, or maintain a separate customer account.
+        Its settings and calendar data remain within Google services.
       </p>
 
-      <h2>Retention</h2>
-      <p>Windblock stores data in your Google™ account (the dedicated calendar and its events). YearMap stores settings in your browser. You can remove either at any time (see “Your choices”). We do not keep server copies.</p>
+      <h2>YearMap</h2>
+      <p>
+        YearMap runs within your Chrome profile. Calendar ranges, categories, notes, and settings are stored using Chrome storage,
+        with optional synchronization through your signed-in Chrome profile. ICS files are generated locally in your browser.
+        YearMap does not require a separate account and does not include extension analytics.
+      </p>
 
-      <h2>Your choices</h2>
+      <h2>Yesterday's Weather</h2>
+      <p>
+        Yesterday's Weather stores the account information, saved airport-station locations, delivery preferences, and monitoring
+        thresholds needed to provide the service. Passwords are stored as hashes. The service uses NOAA observations, National Weather
+        Service alerts, and optional Visual Crossing snowfall data. Resend or SendGrid may process your email address to deliver messages.
+        Basic service events may be recorded to operate and improve the product. The service does not use precise device-location tracking.
+      </p>
+
+      <h2>How information is used</h2>
+      <p>
+        Information is used only to provide, secure, support, and improve the functionality you request. We do not sell personal data
+        or share it with third parties for their own advertising.
+      </p>
+
+      <h2>Service providers</h2>
+      <p>
+        Depending on the product, necessary processing may be performed by Google, Visual Crossing, NOAA, the National Weather Service,
+        Render, PostgreSQL hosting, Resend, SendGrid, and basic product analytics providers. Their handling of data is governed by their
+        respective terms and privacy policies.
+      </p>
+
+      <h2>Retention and your choices</h2>
       <ul>
-        <li><strong>Windblock:</strong> Remove the add-on and delete the “Windblock” calendar in Google Calendar™ to remove created events. You can also revoke app access in your Google™ Account Security settings.</li>
-        <li><strong>YearMap:</strong> Remove the extension via your browser’s extensions page and clear its site data/local storage.</li>
+        <li><strong>Windblock:</strong> Use its uninstall flow, revoke Google Account access, and remove the dedicated calendar.</li>
+        <li><strong>YearMap:</strong> Remove the extension and clear its Chrome storage data.</li>
+        <li><strong>Yesterday's Weather:</strong> Unsubscribe using any email footer, remove saved locations, or request account deletion.</li>
       </ul>
+      <p>
+        To request a copy or deletion of information associated with an account, email
+        <a href="mailto:support@springharborstudios.com">support@springharborstudios.com</a>.
+      </p>
 
       <h2>Children</h2>
-      <p>Our apps are intended for general audiences and are not directed to children under 13.</p>
+      <p>Our products are intended for general audiences and are not directed to children under 13.</p>
 
       <h2>Security</h2>
-      <p>We aim for simple designs that minimize data collection. Any data handled by Google™ or your browser is protected under their platforms’ security controls.</p>
+      <p>
+        We use reasonable technical and organizational safeguards and favor designs that limit collection. No system can guarantee
+        absolute security.
+      </p>
 
       <h2>Changes</h2>
-      <p>We may update this policy. We will update the “Last updated” date and, where appropriate, notify users in-product.</p>
+      <p>
+        We may update this policy as our products evolve. The revision date above will reflect the most recent material update and,
+        where appropriate, users will be notified in-product or by email.
+      </p>
 
       <h2>Contact</h2>
-      <p>Email <a href="mailto:support@springharborstudios.com">support@springharborstudios.com</a> with any privacy questions.</p>
+      <p>Email <a href="mailto:support@springharborstudios.com">support@springharborstudios.com</a> with privacy questions.</p>
     </div>
 
-    <p style="margin-top:18px;"><a href="/">← Back to the Developer site</a></p>
-
-    <div class="trademark">
-      Google™, Google Calendar™, and Chrome™ are trademarks of Google LLC.
-    </div>
-  </div>
-  <script>
-    const d=new Date();
-    document.getElementById('y').textContent=d.getFullYear();
-    document.getElementById('m').textContent=String(d.getMonth()+1).padStart(2,'0');
-    document.getElementById('d').textContent=String(d.getDate()).padStart(2,'0');
-  </script>
+    <p><a href="/">← Back to the developer site</a></p>
+    <div class="trademark">Google™, Google Calendar™, and Chrome™ are trademarks of Google LLC.</div>
+  </main>
 </body>
 </html>

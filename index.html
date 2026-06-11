@@ -2,73 +2,193 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Spring Harbor Studios — Developer</title>
+  <title>Spring Harbor Studios — Small, useful web tools</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Spring Harbor Studios creates small, fun web tools for people with specific interests. Official developer site with app listings, support, and policies." />
+  <meta name="description" content="Spring Harbor Studios creates focused web tools, including Windblock, YearMap, and Yesterday's Weather." />
   <link rel="canonical" href="https://springharborstudios.com/" />
-  <meta property="og:title" content="Spring Harbor Studios — Developer" />
-  <meta property="og:description" content="Small, useful web tools for specific interests. See our apps, support, and privacy." />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <meta name="theme-color" content="#f7f4ef" />
+
+  <meta property="og:title" content="Spring Harbor Studios — Small, useful web tools" />
+  <meta property="og:description" content="Focused tools for calendars, planning, and weather monitoring." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://springharborstudios.com/" />
+  <meta property="og:image" content="https://springharborstudios.com/assets/social-preview.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Spring Harbor Studios — Small, useful web tools" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Spring Harbor Studios — Small, useful web tools" />
+  <meta name="twitter:description" content="Focused tools for calendars, planning, and weather monitoring." />
+  <meta name="twitter:image" content="https://springharborstudios.com/assets/social-preview.png" />
   <meta name="robots" content="index,follow" />
+
   <style>
     :root{
-      --bg:#f7f4ef; --card:#ffffff; --ink:#2a2a2a; --muted:#666; --brand:#1769aa; --line:#e6e1d7;
-      --radius:16px; --shadow:0 6px 18px rgba(0,0,0,.06);
-
-      /* Windblock brand (peacock blue) */
-      --wb:#1769aa;
-      --wb-hover:#125487;
-      --wb-text:#ffffff;
-      --wb-ring:rgba(23,105,170,.32);
+      --bg:#f7f4ef;
+      --card:#ffffff;
+      --ink:#2a2a2a;
+      --muted:#666;
+      --brand:#1769aa;
+      --brand-dark:#125487;
+      --line:#e6e1d7;
+      --radius:16px;
+      --shadow:0 6px 18px rgba(0,0,0,.06);
+      --ring:rgba(23,105,170,.32);
     }
     *{box-sizing:border-box}
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
-    a{color:var(--brand);text-decoration:none}
-    a:hover{text-decoration:underline}
-    header{padding:28px 20px;border-bottom:1px solid var(--line);background:#faf8f4}
-    .wrap{max-width:960px;margin:0 auto}
-    .brand{display:flex;align-items:center;gap:14px}
-    nav{margin-left:auto}
-    .row{display:flex;gap:28px;flex-wrap:wrap}
-    .hero{padding:40px 0}
-    h1{font-size:40px;margin:0 0 8px 0;line-height:1.15}
-    h2{font-size:24px;margin:24px 0 12px}
-    p.lead{font-size:18px;color:var(--muted);max-width:70ch}
-    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px}
-    .apps .card{flex:1 1 300px}
-    .kicker{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-    .badge{display:inline-block;background:#eef5fb;border:1px solid #d6e6f4;color:#0e568a;border-radius:999px;padding:2px 10px;font-size:12px}
-    .footer{margin-top:40px;padding:26px 0;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
-    ul.clean{padding-left:18px;margin:8px 0}
-    small.disclaimer{display:block;color:#666}
-
-    /* CTA button */
-    .btn{
-      display:inline-flex;align-items:center;gap:10px;
-      padding:10px 16px;border-radius:12px;border:1px solid transparent;
-      font-weight:600;line-height:1;text-decoration:none;
-      box-shadow:var(--shadow);
-      transition:background-color .2s ease, transform .02s ease, box-shadow .2s ease;
-      will-change:transform;
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      color:var(--ink);
+      background:var(--bg);
+      font-family:system-ui,-apple-system,"Segoe UI",Roboto,Inter,Arial,sans-serif;
+      line-height:1.6;
     }
-    .btn:active{transform:translateY(1px)}
-    .btn--windblock{background:var(--wb);color:var(--wb-text)}
-    .btn--windblock:hover{background:var(--wb-hover);text-decoration:none}
-    .btn--windblock:focus-visible{outline:none;box-shadow:0 0 0 4px var(--wb-ring)}
-    .btn__logo{height:18px;width:auto;display:block;filter:none}
+    a{color:var(--brand);text-decoration-thickness:1px;text-underline-offset:3px}
+    a:hover{color:var(--brand-dark)}
+    a:focus-visible{outline:3px solid var(--ring);outline-offset:3px;border-radius:3px}
+    header{padding:28px 20px;border-bottom:1px solid var(--line);background:#faf8f4}
+    .wrap{width:min(960px,calc(100% - 40px));margin:0 auto}
+    .header-row{display:flex;align-items:center;justify-content:space-between;gap:28px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .brand a{color:var(--ink);text-decoration:none}
+    nav{display:flex;gap:16px;flex-wrap:wrap;justify-content:flex-end}
+    .hero{padding:48px 0 42px}
+    h1{max-width:850px;margin:0 0 14px;font-size:clamp(36px,5vw,48px);line-height:1.1}
+    h2{margin:0 0 12px;font-size:24px}
+    h3{margin:10px 0 6px;font-size:20px}
+    p.lead{max-width:70ch;margin:0;color:var(--muted);font-size:18px}
+    section[id]{scroll-margin-top:20px}
+    .card{
+      padding:22px;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:var(--card);
+      box-shadow:var(--shadow);
+    }
+    .section{margin-top:28px}
+    .section-title{margin-bottom:14px}
+    .apps-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+    .app-card{display:flex;min-width:0;flex-direction:column}
+    .app-card p{margin:8px 0}
+    .app-card .clean{flex:1}
+    .kicker{color:var(--muted);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+    .badge{
+      align-self:flex-start;
+      padding:2px 10px;
+      border:1px solid #d6e6f4;
+      border-radius:999px;
+      background:#eef5fb;
+      color:#0e568a;
+      font-size:12px;
+    }
+    ul.clean{margin:8px 0;padding-left:18px}
+    .actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:16px}
+    .app-card .actions{align-items:stretch;flex-direction:column}
+    .app-card .btn{width:100%}
+    .btn{
+      display:inline-flex;
+      min-height:42px;
+      align-items:center;
+      justify-content:center;
+      gap:9px;
+      padding:9px 14px;
+      border:1px solid var(--brand);
+      border-radius:11px;
+      background:var(--brand);
+      color:#fff;
+      font-weight:650;
+      line-height:1.2;
+      text-decoration:none;
+      box-shadow:var(--shadow);
+    }
+    .btn:hover{background:var(--brand-dark);color:#fff}
+    .btn--secondary{background:#fff;color:var(--brand)}
+    .btn--secondary:hover{background:#eef5fb;color:var(--brand-dark)}
+    .btn__logo{width:20px;height:20px;display:block}
+    .verification{background:#fafcff}
+    small.disclaimer{display:block;color:var(--muted)}
+    .footer{margin-top:40px;padding:26px 0;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+    @media (max-width:800px){
+      .apps-grid{grid-template-columns:1fr}
+      .header-row{align-items:flex-start;flex-direction:column;gap:18px}
+      nav{justify-content:flex-start}
+    }
+    @media (max-width:520px){
+      header{padding:22px 0}
+      .wrap{width:min(100% - 32px,960px)}
+      .hero{padding:36px 0}
+      nav{gap:10px 16px}
+      .card{padding:20px}
+      .actions{align-items:stretch;flex-direction:column}
+      .actions .btn{width:100%}
+    }
+    @media (prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+    }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://springharborstudios.com/#organization",
+        "name": "Spring Harbor Studios",
+        "url": "https://springharborstudios.com/",
+        "email": "support@springharborstudios.com",
+        "description": "An independent developer of focused web tools for calendars, planning, and weather monitoring.",
+        "sameAs": [
+          "https://yearmap.app/",
+          "https://windblock.app/",
+          "https://yesterdaysweather.app/"
+        ]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Windblock",
+        "url": "https://windblock.app/",
+        "downloadUrl": "https://workspace.google.com/marketplace/app/windblock/316156391256",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Web",
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+        "publisher": {"@id": "https://springharborstudios.com/#organization"}
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "YearMap",
+        "url": "https://yearmap.app/",
+        "downloadUrl": "https://chromewebstore.google.com/detail/yearmap/mhjlipallhabmljhgibfiadncacficao",
+        "applicationCategory": "BrowserApplication",
+        "operatingSystem": "Chrome",
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+        "publisher": {"@id": "https://springharborstudios.com/#organization"}
+      },
+      {
+        "@type": "WebApplication",
+        "name": "Yesterday's Weather",
+        "url": "https://yesterdaysweather.app/",
+        "applicationCategory": "WeatherApplication",
+        "operatingSystem": "Web",
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+        "publisher": {"@id": "https://springharborstudios.com/#organization"}
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <header>
-    <div class="wrap row" style="align-items:center;">
+    <div class="wrap header-row">
       <div class="brand">
         <div>
-          <div class="kicker">Developer</div>
-          <strong>Spring Harbor Studios</strong>
+          <div class="kicker">Independent developer</div>
+          <strong><a href="/">Spring Harbor Studios</a></strong>
         </div>
       </div>
-      <nav class="row" style="gap:16px">
+      <nav aria-label="Main navigation">
         <a href="#about">About</a>
         <a href="#apps">Apps</a>
         <a href="#support">Support</a>
@@ -82,102 +202,114 @@
     <section class="hero">
       <h1>Small, useful web tools for specific interests</h1>
       <p class="lead">
-        Spring Harbor Studios creates small, fun web tools that make daily life a bit simpler and more enjoyable.
-        The focus is on light, practical ideas—things that are easy to use, helpful in everyday situations, and made with a clear point of view.
-        We build for small groups with special interests.
+        Spring Harbor Studios makes focused tools that solve a clear problem without adding unnecessary complexity.
+        Our current projects help people protect time, plan visually, and keep watch over places they care about.
       </p>
     </section>
 
     <section id="about" class="card">
       <h2>About</h2>
       <p>
-        Based in Madison, WI, Spring Harbor Studios is an independent developer creating straightforward web utilities.
-        Our projects are intentionally compact, easy to set up, and respectful of your privacy.
-        We focus on publishing and supporting small tools for niche communities and special interests.
-        For questions or support, you can reach us anytime at
+        Based in Madison, Wisconsin, Spring Harbor Studios is an independent developer creating straightforward web utilities.
+        Our projects are intentionally compact, easy to use, and clear about how they handle your data.
+        For questions or support, email
         <a href="mailto:support@springharborstudios.com">support@springharborstudios.com</a>.
       </p>
     </section>
 
-    <section id="apps" class="apps" style="margin-top:24px;">
-      <h2>Our Tools</h2>
-      <div class="row">
-        <article class="card">
+    <section id="apps" class="section">
+      <h2 class="section-title">Our Tools</h2>
+      <div class="apps-grid">
+        <article class="card app-card">
           <div class="badge">Google Calendar™ add-on</div>
-          <h3 style="margin:10px 0 6px">Windblock</h3>
+          <h3>Windblock</h3>
           <p>
-            Monitors wind forecasts for your ZIP code and blocks off hours that meet your threshold on a dedicated
-            “Windblock” calendar. If the wind drops, the time is freed. Runs within your Google Account™; no personal data sold or shared.
+            Watches the wind forecast and automatically protects matching hours in a dedicated Google Calendar™.
+            Choose the location, wind threshold, active hours, and forecast horizon.
           </p>
           <ul class="clean">
-            <li>Creates and updates a private calendar in your Google Account™</li>
-            <li>Uses public weather data (Open-Meteo)</li>
-            <li>Support: <a href="mailto:support@windblock.app">support@windblock.app</a></li>
+            <li>Uses hourly Visual Crossing forecasts</li>
+            <li>Refreshes every four hours</li>
+            <li>Free, with no separate account</li>
           </ul>
-          <p>
-            <a class="btn btn--windblock"
-               href="https://workspace.google.com/marketplace/app/windblock/316156391256"
-               rel="noopener"
-               role="button"
-               aria-label="Install Windblock from Google Workspace Marketplace">
-              <img class="btn__logo" src="/assets/windblock-128-white.png" alt="Windblock logo" />
-              Install Windblock
+          <div class="actions">
+            <a class="btn" href="https://workspace.google.com/marketplace/app/windblock/316156391256" rel="noopener noreferrer">
+              <img class="btn__logo" src="/assets/windblock-64.png" alt="" />
+              Install
             </a>
-          </p>
+            <a class="btn btn--secondary" href="https://windblock.app/">Learn more</a>
+          </div>
         </article>
 
-        <article class="card">
+        <article class="card app-card">
           <div class="badge">Chrome™ extension</div>
-          <h3 style="margin:10px 0 6px">YearMap</h3>
+          <h3>YearMap</h3>
           <p>
-            A year-at-a-glance planner inspired by the Neatnik™ calendar. Quickly block ranges of days, tag them with colors,
-            and export to ICS for your calendar.
+            A year-at-a-glance planner for Chrome™ with range selection, category lanes, notes, day totals, and local ICS export.
           </p>
           <ul class="clean">
-            <li>Local storage for your settings (in your browser)</li>
-            <li>Optional ICS export</li>
-            <li>Support: <a href="mailto:support@syearmap.app">support@yearmap.app</a></li>
+            <li>Runs in your new tab or a regular tab</li>
+            <li>Chrome storage with optional device sync</li>
+            <li>No account or extension tracking</li>
           </ul>
-          <p><a href="#" aria-disabled="true">Chrome Web Store™ (coming soon)</a></p>
+          <div class="actions">
+            <a class="btn" href="https://chromewebstore.google.com/detail/yearmap/mhjlipallhabmljhgibfiadncacficao" rel="noopener noreferrer">Add to Chrome</a>
+            <a class="btn btn--secondary" href="https://yearmap.app/">Learn more</a>
+          </div>
+        </article>
+
+        <article class="card app-card">
+          <div class="badge">Weather monitoring</div>
+          <h3>Yesterday's Weather</h3>
+          <p>
+            Monitors cabins, second homes, rentals, and other places from afar using observed weather and alerts rather than forecasts.
+          </p>
+          <ul class="clean">
+            <li>NOAA observations and NWS alerts</li>
+            <li>Daily or notable-events-only email</li>
+            <li>Up to five saved US locations</li>
+          </ul>
+          <div class="actions">
+            <a class="btn" href="https://yesterdaysweather.app/">Visit the app</a>
+          </div>
         </article>
       </div>
     </section>
 
-    <section id="support" class="card" style="margin-top:24px;">
-      <h2>Support & Contact</h2>
+    <section id="support" class="card section">
+      <h2>Support &amp; Contact</h2>
       <p>
-        If you have questions, need help, or want to report an issue, email us at
+        For general questions, product support, or issue reports, email
         <a href="mailto:support@springharborstudios.com">support@springharborstudios.com</a>.
-        We do our best to respond within two business days. You can also review our
-        <a href="/privacy/">Privacy Policy</a> and <a href="/terms/">Terms of Use</a> for more information about how we operate.
+        We do our best to respond within two business days. Product-specific help is also available from the
+        <a href="https://windblock.app/support/">Windblock support page</a>,
+        <a href="https://yearmap.app/support/">YearMap support page</a>, and
+        <a href="https://yesterdaysweather.app/contact">Yesterday's Weather contact page</a>.
       </p>
     </section>
 
-    <section class="card" style="margin-top:24px;">
-      <h2>Developer Verification</h2>
+    <section class="card section verification">
+      <h2>Official Developer Site</h2>
       <p>
-        This website serves as the official developer home for Spring Harbor Studios.
-        It provides information about our published apps, support resources, and policies.
-        All listings, updates, and contact details found here can be relied on as the authoritative source for our work.
+        This is the official developer home for Spring Harbor Studios. It provides authoritative links to our current products,
+        support resources, privacy policy, and terms.
       </p>
     </section>
 
-    <!-- Trademark attribution -->
-    <section class="card" style="margin-top:24px;">
+    <section class="card section" aria-label="Trademark notices">
       <small class="disclaimer">
         Google™, Google Account™, Google Calendar™, Google Workspace Marketplace™, Chrome™, and Chrome Web Store™ are trademarks of Google LLC.
-        Neatnik™ is a trademark of its respective owner.
-        All other trademarks are the property of their respective owners.
+        Neatnik™ is a trademark of its respective owner. All other trademarks are the property of their respective owners.
       </small>
     </section>
 
-    <div class="footer">
-      <div class="wrap">
-        © <span id="y"></span> Spring Harbor Studios · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a>
-      </div>
-    </div>
+    <footer class="footer">
+      © <span id="year"></span> Spring Harbor Studios · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a>
+    </footer>
   </main>
 
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
