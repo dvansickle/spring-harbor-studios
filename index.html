@@ -4,13 +4,13 @@
   <meta charset="utf-8" />
   <title>Spring Harbor Studios — Small, useful web tools</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Spring Harbor Studios creates focused web tools, including Windblock, YearMap, and Yesterday's Weather." />
+  <meta name="description" content="Spring Harbor Studios creates focused web tools, including Windblock and YearMap." />
   <link rel="canonical" href="https://springharborstudios.com/" />
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
   <meta name="theme-color" content="#f7f4ef" />
 
   <meta property="og:title" content="Spring Harbor Studios — Small, useful web tools" />
-  <meta property="og:description" content="Focused tools for calendars, planning, and weather monitoring." />
+  <meta property="og:description" content="Focused tools for calendars and visual planning." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://springharborstudios.com/" />
   <meta property="og:image" content="https://springharborstudios.com/assets/social-preview.png" />
@@ -19,7 +19,7 @@
   <meta property="og:image:alt" content="Spring Harbor Studios — Small, useful web tools" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Spring Harbor Studios — Small, useful web tools" />
-  <meta name="twitter:description" content="Focused tools for calendars, planning, and weather monitoring." />
+  <meta name="twitter:description" content="Focused tools for calendars and visual planning." />
   <meta name="twitter:image" content="https://springharborstudios.com/assets/social-preview.png" />
   <meta name="robots" content="index,follow" />
 
@@ -130,53 +130,55 @@
   </style>
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://springharborstudios.com/#organization",
-        "name": "Spring Harbor Studios",
-        "url": "https://springharborstudios.com/",
-        "email": "support@springharborstudios.com",
-        "description": "An independent developer of focused web tools for calendars, planning, and weather monitoring.",
-        "sameAs": [
-          "https://yearmap.app/",
-          "https://windblock.app/",
-          "https://yesterdaysweather.app/"
-        ]
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://springharborstudios.com/#organization",
+      "name": "Spring Harbor Studios",
+      "url": "https://springharborstudios.com/",
+      "email": "support@springharborstudios.com",
+      "description": "An independent developer of focused web tools for calendars and visual planning.",
+      "sameAs": [
+        "https://yearmap.app/",
+        "https://windblock.app/"
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Windblock",
+      "url": "https://windblock.app/",
+      "downloadUrl": "https://workspace.google.com/marketplace/app/windblock/316156391256",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
       },
-      {
-        "@type": "SoftwareApplication",
-        "name": "Windblock",
-        "url": "https://windblock.app/",
-        "downloadUrl": "https://workspace.google.com/marketplace/app/windblock/316156391256",
-        "applicationCategory": "UtilitiesApplication",
-        "operatingSystem": "Web",
-        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
-        "publisher": {"@id": "https://springharborstudios.com/#organization"}
-      },
-      {
-        "@type": "SoftwareApplication",
-        "name": "YearMap",
-        "url": "https://yearmap.app/",
-        "downloadUrl": "https://chromewebstore.google.com/detail/yearmap/mhjlipallhabmljhgibfiadncacficao",
-        "applicationCategory": "BrowserApplication",
-        "operatingSystem": "Chrome",
-        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
-        "publisher": {"@id": "https://springharborstudios.com/#organization"}
-      },
-      {
-        "@type": "WebApplication",
-        "name": "Yesterday's Weather",
-        "url": "https://yesterdaysweather.app/",
-        "applicationCategory": "WeatherApplication",
-        "operatingSystem": "Web",
-        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
-        "publisher": {"@id": "https://springharborstudios.com/#organization"}
+      "publisher": {
+        "@id": "https://springharborstudios.com/#organization"
       }
-    ]
-  }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "YearMap",
+      "url": "https://yearmap.app/",
+      "downloadUrl": "https://chromewebstore.google.com/detail/yearmap/mhjlipallhabmljhgibfiadncacficao",
+      "applicationCategory": "BrowserApplication",
+      "operatingSystem": "Chrome",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "publisher": {
+        "@id": "https://springharborstudios.com/#organization"
+      }
+    }
+  ]
+}
   </script>
 </head>
 <body>
@@ -258,21 +260,6 @@
           </div>
         </article>
 
-        <article class="card app-card">
-          <div class="badge">Weather monitoring</div>
-          <h3>Yesterday's Weather</h3>
-          <p>
-            Monitors cabins, second homes, rentals, and other places from afar using observed weather and alerts rather than forecasts.
-          </p>
-          <ul class="clean">
-            <li>NOAA observations and NWS alerts</li>
-            <li>Daily or notable-events-only email</li>
-            <li>Up to five saved US locations</li>
-          </ul>
-          <div class="actions">
-            <a class="btn" href="https://yesterdaysweather.app/">Visit the app</a>
-          </div>
-        </article>
       </div>
     </section>
 
@@ -282,9 +269,8 @@
         For general questions, product support, or issue reports, email
         <a href="mailto:support@springharborstudios.com">support@springharborstudios.com</a>.
         We do our best to respond within two business days. Product-specific help is also available from the
-        <a href="https://windblock.app/support/">Windblock support page</a>,
-        <a href="https://yearmap.app/support/">YearMap support page</a>, and
-        <a href="https://yesterdaysweather.app/contact">Yesterday's Weather contact page</a>.
+        <a href="https://windblock.app/support/">Windblock support page</a> and
+        <a href="https://yearmap.app/support/">YearMap support page</a>.
       </p>
     </section>
 
